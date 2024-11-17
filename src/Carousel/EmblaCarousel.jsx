@@ -42,10 +42,9 @@ const EmblaCarousel = ({ slides, options, onSlideChange }) => {
               key={index}
             >
               <div className="embla__slide__number">
-                <img src={obj.image} alt={obj.name} />
-                <h2 className="font-bold text-2xl text-white absolute bottom-4 left-4">
-                  {obj.name}
-                </h2>
+                <div className="">
+                    <img src={obj.image} alt={obj.name} />
+                </div>
               </div>
             </div>
           ))}

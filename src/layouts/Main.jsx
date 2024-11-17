@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
 import EmblaCarousel from '../Carousel/EmblaCarousel';
 import Navbar from '../components/Navbar/Navbar';
-
+import Banner1 from '../assets/Rectangle 1.png'
+import Banner2 from '../assets/Sajek.png'
+import Banner3 from '../assets/Sreemongol.png'
+import Banner4 from '../assets/sundorbon.png'
 const Main = () => {
   const OPTIONS = { dragFree: true };
   const SLIDES = [
     {
       name: 'walid',
-      image: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
+      image: Banner1,
     },
     {
       name: 'zahid',
-      image: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
+      image: Banner2,
     },
     {
       name: 'Sazid',
-      image: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
+      image: Banner3,
+    },
+    {
+      name: 'Rohit',
+      image: Banner4,
     },
   ];
 
@@ -33,7 +40,6 @@ const Main = () => {
     backgroundImage: `url(${bgImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
     transition: 'background 0.5s ease-in-out',
   };
 
@@ -44,15 +50,15 @@ const Main = () => {
       </div>
 
       <div className="flex justify-end">
-        <div className="px-12 py-48">
+        <div className="px-12">
           <EmblaCarousel slides={SLIDES} options={OPTIONS} onSlideChange={handleSlideChange} />
         </div>
       </div>
 
       {/* Display the current name */}
-      <div className="text-white text-center mt-4">
+      {/* <div className="text-white text-center mt-4">
         <h1 className="text-4xl font-bold">{currentName}</h1>
-      </div>
+      </div> */}
     </div>
   );
 };
